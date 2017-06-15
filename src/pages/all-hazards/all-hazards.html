@@ -1,0 +1,42 @@
+
+<ion-header ng-controller="Ctrl">
+
+  <ion-navbar  color="prox">
+    
+    <ion-title>PROXiMUS<small>&reg;</small> </ion-title>
+
+  <ion-buttons end>
+      <button ion-button (click)= "goToPresentationMode()">
+        <ion-icon class="myicon" name="ios-pie-outline" item-left></ion-icon>
+        
+      </button>
+      <button ion-button icon-only (click)="showPopover($ev0ent)" ><ion-icon class="myicon2" name="ios-shuffle-outline"  isActive="true"></ion-icon></button>
+  </ion-buttons>
+
+
+  
+    
+  </ion-navbar>
+ 
+</ion-header>
+
+
+
+<ion-content>
+<ion-spinner name="circles" *ngIf="locations === undefined && locationTracker.lng === undefined"></ion-spinner>
+<div class="map-container" *ngIf ='locations !== undefined && locationTracker.lat !== undefined' >
+    <div id="map" >
+    </div>
+  </div>
+
+
+  <ion-fab right bottom>
+    <button ion-fab color="prox" (click)= "goToHazards()"><img src="assets/img/p.png" /></button>
+  </ion-fab>
+
+
+
+</ion-content>
+
+
+

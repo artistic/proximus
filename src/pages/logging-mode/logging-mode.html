@@ -1,0 +1,103 @@
+<ion-header>
+
+  <ion-navbar color="prox">
+    <ion-title>Logging Mode</ion-title>
+
+    <ion-buttons start>
+      <button ion-button item-right icon-left>
+        <ion-icon name="contact"></ion-icon>
+        Admin
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+ 
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="assets/img/users/54.jpg">
+    </ion-avatar>
+    <h2>Lawrence Gumbo</h2>
+    <p><small>Last Login : </small></p>
+  </ion-item>
+
+  <hr />
+  <ion-card-content>
+      
+      <ion-list>
+        <ion-item>
+          <ion-badge color="prox" item-left>1</ion-badge>
+          Sites
+          <button ion-button color="prox" fill item-right icon-left>
+            <ion-icon name="add-circle"></ion-icon>
+            Add Site
+          </button>
+        </ion-item>
+
+        <ion-item>
+          <ion-badge color="prox" (click)="goToHazards()" item-left>6</ion-badge>
+          <p (click)="goToHazards()"> Hazards </p>
+          <button ion-button color="prox" fill item-right icon-left (click)="goToHazards()">
+            <ion-icon name="add-circle"></ion-icon>
+            Upload Hazards
+          </button>
+        </ion-item>
+
+      </ion-list>
+
+
+      <hr />
+      <h2>Recent Uploads On Site</h2>
+
+      <ion-list>
+        <ion-item>
+          <ion-icon small color="prox" name="warning" item-left></ion-icon>
+            Hazard Name
+          <ion-icon small name="clock" item-right></ion-icon>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon small color="prox" name="warning" item-left></ion-icon>
+            Hazard Name 2
+          <ion-icon small name="clock" item-right></ion-icon>
+        </ion-item>
+
+      </ion-list>
+
+
+
+
+
+
+
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      
+    </ion-col>
+    
+    <ion-col>
+      <button ion-button small color="prox" fill item-right icon-left>
+            <ion-icon name="settings"></ion-icon>
+            Settings
+      </button>
+    </ion-col>
+
+    <ion-col>
+      <button ion-button small color="danger" fill item-right icon-left (click)="logOut()">
+            <ion-icon name="log-out"></ion-icon>
+            Sign Out
+      </button>
+    </ion-col>
+
+
+  </ion-row>
+
+</ion-card>
+</ion-content>

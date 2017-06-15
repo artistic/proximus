@@ -1,0 +1,17 @@
+page-logging-mode {
+     .content{
+   background: url(../assets/img/bg.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+   background-size: cover;
+   }
+
+}
+
+.list-avatar-page {
+  ion-note {
+    font-size: 12px;
+    align-self: flex-start;
+    margin-top: 14px;
+  }
+}

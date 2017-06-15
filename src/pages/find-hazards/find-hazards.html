@@ -1,0 +1,39 @@
+<!--
+  Generated template for the FindHazards page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="prox">
+    <ion-title>Find Hazard Locations</ion-title>
+
+    <ion-buttons start>
+      <button ion-button item-right icon-left>
+        <ion-icon name="contact"></ion-icon>
+        {{userEm}}
+      </button>
+  </ion-buttons>
+  
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <div class="map-container3">
+    <div id="map3">
+    </div>
+  </div>
+  <ion-fab right bottom>
+    <button ion-fab color="prox"><ion-icon name="md-warning"></ion-icon></button>
+    <ion-fab-list side="top">
+     <button ion-fab  color="prox" (click)= "goToLogging()" ><ion-icon name="md-add"></ion-icon></button>
+      <button ion-fab color="prox" ><ion-icon name="md-analytics"></ion-icon></button>
+      <button ion-fab  color="prox"><ion-icon name="md-eye"></ion-icon></button>
+     
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

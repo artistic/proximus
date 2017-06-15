@@ -1,0 +1,43 @@
+<ion-menu [content]="content" side="right">
+
+  <ion-header>
+    <ion-navbar>
+      <ion-title>
+        <ion-icon name="settings"></ion-icon> Settings
+      </ion-title>    
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content>
+		  <ion-card-header>
+		   	<ion-item>
+			    <ion-avatar item-left>
+			      <img src="assets/img/users/78.jpg">
+			    </ion-avatar>
+			    <h2>Svensonlabs Company</h2>
+			    <p><small>PROXiMUS version 1.2</small></p>
+			  </ion-item>
+		  </ion-card-header>
+
+		  <ion-list>
+		    <button ion-item>
+		      <ion-icon name="notifications" item-left></ion-icon>
+		      Notifications
+		    </button>
+
+		    <button ion-item>
+		      <ion-icon name="help" item-left></ion-icon>
+		      Help
+		    </button>
+
+		    <button ion-item>
+		      <ion-icon name="build" item-left></ion-icon>
+		      Settings
+		    </button>
+
+		  </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

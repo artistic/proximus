@@ -1,0 +1,36 @@
+
+<ion-header>
+
+  <ion-navbar color="prox" text-center>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+ 
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list no-lines>
+
+    <ion-item class="call heading-one" text-wrap><h1><strong>PROXiMUS	&reg;</strong></h1></ion-item>
+    <ion-item class="call heading-two" text-wrap><h2>The hazard proximity monitoring, alerting and trending system </h2></ion-item>
+  </ion-list>
+
+<form>
+ <ion-list no-lines>
+
+  <ion-item margin-bottom>
+   
+    <ion-input type="text" name="email" placeholder="Enter your email" [(ngModel)] ="email" ></ion-input>
+  </ion-item>
+
+  <ion-item margin-bottom>
+  
+    <ion-input type="password" name="password" placeholder="Enter your password" [(ngModel)]="password" ></ion-input>
+  </ion-item>
+  <button ion-button block color = "prox" (click) = "login()" >Login</button>
+
+</ion-list>
+</form>
+
+</ion-content>

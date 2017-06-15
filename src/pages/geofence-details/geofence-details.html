@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar color="prox">
+    <ion-title>PROXiMUS<small>&reg;</small> </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="saveChanges()">
+        <ion-icon name="bookmarks"></ion-icon>
+         Save And Upload Hazard
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="geofence-details-page">
+  <ion-list class="geofence-input-list" >
+
+    
+
+    <ion-item>
+      <ion-input [(ngModel)]="notificationText" type="text" placeholder="Add Hazard Description Text Here"></ion-input>    
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Alert When User...?</ion-label>
+      <ion-select [(ngModel)]="transitionType">
+        <ion-option value="1">Enter Region</ion-option>
+        <ion-option value="2">Exit Region</ion-option>
+        <ion-option value="3">Enter or Exit Region</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Select Hazard Type</ion-label>
+      <ion-select [(ngModel)]="selectedHazardType">
+        <ion-option *ngFor="let hazard of hazardTypes; let i = index;" value="{{i}}">{{hazard.name}}</ion-option>       
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="txtme">Hazard Duration in Hours</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="H mm" ></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="10" max="100" [(ngModel)]="radius" secondary>
+        <ion-label class="txtme" range-left>Radius:</ion-label>
+        <ion-label range-right>{{radius}}m</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>  
+      <ion-label class="txtme"><ion-icon name="camera" item-right></ion-icon> <small> Add Picture Of Hazard <i>(Optional)</i></small></ion-label> 
+    </ion-item>
+    
+  </ion-list>
+
+    
+
+
+
+  <div class="map-container2">
+    <div id="map2">
+    </div>
+  </div>
+
+
+</ion-content>

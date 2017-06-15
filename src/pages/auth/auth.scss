@@ -1,0 +1,28 @@
+page-auth {
+     .content{
+   background: url(../assets/img/bg1.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
+
+  .list.list-ios,
+  .list.list-md
+  {
+    //   margin-top:10%;
+      ion-input{
+            border: 1px solid #ccc;    
+            border-radius:2em;
+            input{
+                height:1.5em;
+                background: transparent;
+                padding-left: 1em;
+            }
+      }
+  }  
+
+  ion-item.call{
+    text-align: center;
+    background: transparent;
+}     
+}

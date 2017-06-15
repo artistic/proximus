@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar color="prox">
+   
+    <ion-title>PROXiMUS<small>&reg;</small> </ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="new()" item-right icon-left>
+        <ion-icon name="add"></ion-icon>
+         Upload New Hazard 
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="geofence-list-page">
+
+<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+<ion-spinner name = "circles" *ngIf="locations === undefined"></ion-spinner>
+  <ion-list  *ngIf="!isLoading && geofences.length > 0" color="dark">
+
+    <ion-item-sliding *ngFor="let location of locations | async"  color="dark">
+
+        <ion-item (click)="geofenceItemTapped(location)">   
+            <ion-thumbnail item-left>
+              <img src="assets/img/thumbs/{{location.notification.data }}">
+            </ion-thumbnail>
+          <h2>
+            <span class="listTitle">{{location.notification.text}}</span>
+          </h2>
+          
+          <p class="listwords">
+            <small>
+            <ion-icon small color="prox" name="warning" item-right></ion-icon>
+            Alerts When Within {{location.radius}} M 
+
+
+            <ion-icon small color="prox" name="clock" item-right></ion-icon>
+            </small>
+          </p>
+
+
+        </ion-item>
+
+      <ion-item-options>
+        <button ion-button >Remove</button>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+ 
+  
+
+  <ion-card *ngIf="!isLoading && geofences.length === 0">
+    <ion-card-header>
+      There are no geofences yet.
+    </ion-card-header>
+  </ion-card>
+  <ion-card *ngIf="isLoading">
+    <ion-card-header>
+      Loading geofences...
+    </ion-card-header>
+  </ion-card>
+</ion-content>
+
+<ion-fab bottom right  >
+  <button ion-fab (click)="new()" class="add-geofence-button" color="prox">
+    <ion-icon name="md-add"></ion-icon>
+  </button>
+</ion-fab>

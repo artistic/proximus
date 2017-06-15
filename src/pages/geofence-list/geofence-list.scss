@@ -1,0 +1,28 @@
+.geofence-list-page {
+  ion-list {
+    margin-bottom: 80px;        /*space for fab button*/
+  }
+}
+
+.add-geofence-button {
+  z-index: 100;
+}
+
+.listTitle
+{
+    color : #FFCC00 !important;
+}
+
+.listwords
+{
+	font-size: 12px;
+    color : #666666 !important;
+    line-height: 5px;
+     margin: 0px;
+}
+
+.ion-note {
+    font-size: 12px;
+    align-self: flex-start;
+    margin-top: 14px;
+}

@@ -1,0 +1,50 @@
+<!--
+  Generated template for the PresentationMode page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar  color="prox">
+    
+    <ion-title>PROXiMUS<small>&reg;</small> </ion-title>
+
+  <ion-buttons end>
+      <ion-icon name="ios-pie-outline" item-left></ion-icon>
+      Presentation Mode
+  </ion-buttons>
+
+
+  
+    
+  </ion-navbar>
+ 
+</ion-header>
+
+
+<ion-content padding>
+
+   <ion-card>
+      <ion-card-header>
+        Year To Date Violations
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+     <ion-card>
+      <ion-card-header>
+       New Hazards
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #lineCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+<ion-list no-lines>
+     <button ion-button block color="prox">Export as Excel</button>
+     <button ion-button block color="prox">Send as attachment</button>
+     <button ion-button block color="prox">Share Report</button>
+</ion-list>
+</ion-content>
